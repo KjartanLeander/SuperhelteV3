@@ -1,7 +1,7 @@
 package com.example.superheltev3.model;
 
-public class Superhelt {
-    public Superhelt(String name, String superpower, boolean human, int introYear, double strengthPoint) {
+public class Superhero {
+    public Superhero(String name, String superpower, boolean human, int introYear, double strengthPoint) {
         this.name = name;
         this.superpower = superpower;
         this.human = human;
