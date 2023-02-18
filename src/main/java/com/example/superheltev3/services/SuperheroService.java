@@ -29,5 +29,7 @@ public class SuperheroService {
     public List<Superhero> deleteSuperhero(String name) {
         return superheroRepository.deleteSuperhero(name);
     }
-
+    public void editSuperhero(Superhero superhero, String newName, String newSuperpower, boolean newHuman, int newIntroYear, double newStrengthPoint) {
+        superheroRepository.editSuperhero(superhero, newName, newSuperpower, newHuman, newIntroYear, newStrengthPoint);
+    }
 }

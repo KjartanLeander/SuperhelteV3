@@ -42,5 +42,27 @@ public class SuperheroRepository {
     }
 
 
+    public void editSuperhero(Superhero editSuperhero, String newName, String newSuperpower, boolean newHuman, int newIntroYear, double newStrengthPoint) {
+        for (Superhero superhero : superheroes){
+            if (superhero.getName().equals(editSuperhero.getName())){
+                    editSuperhero.setName(newName);
+                }
+                if (newName != null) {
+                    editSuperhero.setName(newName);
+                }
+                if (newIntroYear >= 0) {
+                    editSuperhero.setIntroYear(Integer.parseInt(String.valueOf(newIntroYear)));
+                }
+                if (newSuperpower != null) {
+                    editSuperhero.setSuperpower(newSuperpower);
+                }
+                if (newHuman) {
+                    editSuperhero.setHuman(newHuman);
+                }
+                if (newStrengthPoint >= 0) {
+                    editSuperhero.setStrengthPoint(Double.parseDouble(String.valueOf(newStrengthPoint)));
+                }
+            }
+        }
+    }
 
-}

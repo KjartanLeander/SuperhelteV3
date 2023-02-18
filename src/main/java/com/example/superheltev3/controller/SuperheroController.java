@@ -59,7 +59,11 @@ public class SuperheroController {
         List<Superhero> deletedSuperhero = superheroService.deleteSuperhero(name);
         return new ResponseEntity(deletedSuperhero,HttpStatus.OK);
     }
-
+    @PutMapping(path = {"/edit"})
+    public ResponseEntity<Superhero> putMessage(@RequestBody Superhero superhero) {
+        superheroService.editSuperhero(superhero,superhero.getName(),superhero.getSuperpower(),superhero.isHuman(),superhero.getIntroYear(),superhero.getStrengthPoint());
+        return new ResponseEntity<>(superhero, HttpStatus.OK);
+    }
 
 }
 
